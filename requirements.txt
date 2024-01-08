@@ -1,0 +1,17 @@
+--find-links https://download.pytorch.org/whl/cu118
+Cython
+opencv-python
+hydra-core
+numpy
+opencv-python
+torch
+torchvision
+torchaudio
+matplotlib
+PyYAML
+scipy
+tensorboard
+thop
+scikit-image
+pathlib
+setuptools

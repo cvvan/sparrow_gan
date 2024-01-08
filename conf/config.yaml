@@ -1,0 +1,15 @@
+defaults: 
+  - model: default
+  - datasets: default
+  
+  
+training:
+  lr: 0.0002
+  epochs: 150
+  beta1: 0.5
+
+data:
+  in_dir: "datasets/handmade"
+  out_tb: "/outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}/tb/"
+  out_imgs: "/outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}/imgs/"
+  

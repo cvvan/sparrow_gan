@@ -1,0 +1,9 @@
+height: 64
+width: 64
+color: True
+batch: 64
+
+folder: "/datasets/sparrow"
+
+
+

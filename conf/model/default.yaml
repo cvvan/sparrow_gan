@@ -1,0 +1,8 @@
+image:
+  size: 64
+  color: True
+  batch: 64
+ac:
+  cnn: [8,16,32]
+  kernel: 3
+  linear: [256,128]
