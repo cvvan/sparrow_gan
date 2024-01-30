@@ -59,7 +59,7 @@ class Trainer():
             trainR_loss.append(lossR.detach().cpu().numpy())
             ## Train with all-fake batch
             # Generate batch of latent vectors
-            noise = torch.randn(b_size, 100, 1, 1, device=self.dev)
+            noise = torch.randn(b_size, 50, 1, 1, device=self.dev)
             # Generate fake image batch with G
             fake = self.mod(noise)
             label.fill_(self.fl)
@@ -152,7 +152,7 @@ def custom_loader(train_ds, h=64,w=64,color = True, batch = 10):
                                 tfs.ToTensor(),
                                 tfs.Normalize((0.5,0.5,0.5),(0.5,0.5,0.5)),
                             ]))
-    dataset = torch.utils.data.ConcatDataset([dataset_og,mirror_dataset,sharp_dataset,autocontrast_dataset])     
+    dataset = torch.utils.data.ConcatDataset([dataset_og,mirror_dataset,autocontrast_dataset])     
     # loaders
     train_loader = torch.utils.data.DataLoader(dataset,batch_size=batch,
                                          shuffle=True,num_workers=2)

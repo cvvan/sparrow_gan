@@ -1,7 +1,7 @@
 image:
   size: 64
   color: True
-  batch: 64
+  batch: 32
 ac:
   cnn: [8,16,32]
   kernel: 3

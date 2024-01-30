@@ -4,7 +4,7 @@ from torch import nn as nn
 
 class Generator(torch.nn.Module):
     def __init__(self,nc):
-        nz = 100 #size of generator input
+        nz = 50 #size of generator input
         ngf = 64 #size of feature maps
         super(Generator, self).__init__()
         self.gen=nn.Sequential(

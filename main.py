@@ -83,7 +83,7 @@ def __main__(cfg: DictConfig)->None:
     #Noise
     # Create batch of latent vectors that we will use to visualize
     #  the progression of the generator
-    fixed_noise = torch.randn(64, 100, 1, 1, device=device) # 50 size og gen input
+    fixed_noise = torch.randn(64, 50, 1, 1, device=device) # 50 size og gen input
     
     # Using an Adam Optimizer
     optimizerD = torch.optim.Adam(netD.parameters(),
@@ -131,7 +131,7 @@ def __main__(cfg: DictConfig)->None:
         ##################
         ##https://medium.com/dataseries/convolutional-autoencoder-in-pytorch-on-mnist-dataset-d65145c132ac
         # Part 4
-        if epoch % 15 == 0:
+        if epoch % 5 == 0:
             plt.figure(figsize=(10,10)),
             classes=1
             #targets = test_ds.targets.numpy()
