@@ -1,0 +1,28 @@
+model:
+  image:
+    size: 64
+    color: true
+    batch: 32
+  ac:
+    cnn:
+    - 8
+    - 16
+    - 32
+    kernel: 3
+    linear:
+    - 256
+    - 128
+datasets:
+  height: 64
+  width: 64
+  color: true
+  batch: 64
+  folder: /datasets/sparrow
+training:
+  lr: 0.0003
+  epochs: 600
+  beta1: 0.5
+data:
+  in_dir: datasets/handmade
+  out_tb: /outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}/tb/
+  out_imgs: /outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}/imgs/
